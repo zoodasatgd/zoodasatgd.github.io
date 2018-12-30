@@ -3,7 +3,7 @@
 
   Chrome -> F12 -> Console -> CTRL+V :
 
-   $x("/html/head/style[2]")[0].innerText = "@import url('/zoodasa_rainbow.css');"
+   $x("/html/head/style[2]")[0].innerText = "@import url('https://zoodasatgd.github.io/theme1/rainbow.css');"
 
  
 */
@@ -132,6 +132,7 @@ header #header-bar>.row:before {
 /* Paginator */
 .pagination{
     border-radius: 3px;
+    padding-left: 3px;
 }
 .pagination>.active>a,.pagination>.active>a:hover{
     color: #555;
