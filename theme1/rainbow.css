@@ -1,0 +1,256 @@
+/* 
+  How to test:
+
+  Chrome -> F12 -> Console -> CTRL+V :
+
+   $x("/html/head/style[2]")[0].innerText = "@import url('/zoodasa_rainbow.css');"
+
+ 
+*/
+
+/* Background */
+html {
+  background: none !important;
+}
+body {
+ background:
+  linear-gradient( 15deg,
+    hsla(270, 30%, 30%, 1) 0%,
+    hsla(30, 100%, 0%, 0.0) 49%,
+    hsla(100, 100%, 100%, 0.0) 51%,
+    hsla(0, 30%, 90%, 1) 98%), 
+  linear-gradient( -25deg,
+    rgb(237, 237, 151) 0%,
+    rgb(197, 255, 158) 9.5%,
+    rgb(194, 237, 151) 10%,
+    rgb(158, 255, 168) 19.6%,
+    rgb(151, 237, 151) 20%,
+    rgb(158, 255, 217) 29.7%,
+    rgb(151, 237, 194) 30%,
+    rgb(158, 246, 255) 39.8%,
+    rgb(151, 237, 237) 40%,
+    rgb(158, 197, 255) 49.9%,
+    rgb(151, 194, 237) 50%,
+    rgb(168, 158, 255) 60%,
+    rgb(151, 151, 237) 60%,
+    rgb(217, 158, 255) 69.9%,
+    rgb(194, 151, 237) 70%,
+    rgb(255, 158, 246) 79.8%,
+    rgb(237, 151, 237) 80%,
+    rgb(255, 158, 197) 89.7%,
+    rgb(237, 151, 194) 90%,
+    rgb(255, 168, 158) 99.6%);
+
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+
+/* Logo */
+body > header > div:nth-child(1) > div > div.col-xs-4 > a > img{
+    filter: hue-rotate(-328deg) opacity(0.6);
+}
+
+
+/* Header ^_____^ */
+header #header-bar {
+    margin-top: 7px;
+}
+header #header-bar>.row {
+    border: none;
+    padding: 1px 0px;
+}
+header #right-search-form:before{
+    content: " ";
+   position: absolute;
+    width: 214px;
+    height: 36px;
+    display: block;
+    right: 49px;
+}
+header #right-search-form>input[type=text]{
+    border:none;
+    margin:3px;
+}
+.fa-search:before {
+    color: #b499ff;
+}
+header #header-bar #header-top-notice strong.notice-badge{
+    color: #555;
+}
+
+
+/* Menu <<< _______ */
+#main .menu-wrapper {
+    border: none;
+}
+#main .menu-wrapper>a {
+    border:none;
+    border-bottom:1px solid #e2e2e2;
+}
+#main .menu-wrapper .spacer{
+    background:transparent;
+}
+#main .menu-wrapper>.header {
+     color: #555;
+     padding: 5px 1.4em 6px 1em;
+     margin:0;
+     }
+
+header #header-bar>.row:before {
+    content: " ";
+    height: 4px;
+    width: 100%;
+    position: relative;
+    top: -5px;
+}
+#main .menu-wrapper>.header>a{
+    color: #555;
+}
+
+
+
+/* articles ____ >>>>>>>> */
+#main #main-content>div.frame {
+    border:none;
+}
+#article-list>div:nth-child(2) { 
+    border:none !important;
+}
+#article-content-wrapper>.header{
+    border:none;
+}
+#article-content-wrapper:before,
+#article-list:before {
+    content: " ";
+    height: 2px;
+    width:100%;
+    display: block;
+}
+
+
+/* Paginator */
+.pagination{
+    border-radius: 3px;
+}
+.pagination>.active>a,.pagination>.active>a:hover{
+    color: #555;
+    background:none;
+    background:#ffffffed;
+}
+.pagination>li>a:hover{
+    border-color: #555;
+    background:#ffffff;
+    color:#555;
+}
+
+.pagination>li>a{
+    background: #ffffff8a;
+    border:none;
+    border-right:1px solid #a7a7a7;
+    margin:2px 2px;
+    padding: 5px 10px;
+    border-radius: 3px !important;
+}
+
+
+.pagination,
+header #right-search-form:before,
+#main .menu-wrapper>.header,
+header #header-bar>.row:before,
+#article-content-wrapper:before,
+#article-list:before,
+header #header-bar #header-top-notice strong.notice-badge{
+    background-image: linear-gradient( 45deg, rgb(180, 153, 255) 19%, rgb(255, 153, 208) 39.4%, rgb(255, 221, 153) 59.8%, rgb(167, 255, 153) 79.8%, rgb(153, 249, 255) 100%);
+}
+
+
+
+
+/* Animations */
+/* Nickname (Desktop) */
+#board-info > h1 > a:nth-child(1) {
+    letter-spacing: 0.04em;
+}
+
+/* Nickname > Animation (Mobile + Desktop) */
+#board-info > h1 > a:first-of-type:hover,
+#board-info > h1 > a:first-of-type:focus,
+#board-info > h1 > a:first-of-type:active {
+    animation: 180ms 1 alternate 100ms slidein,     250ms 1 alternate 180ms slidein,     660ms 1 alternate 330ms slidein;
+}
+@keyframes slidein {
+0% {
+}
+25% {
+    text-shadow: -1px 0px 0px #00ff03, -2px 0px 0px #000000;
+    color: #ffffff;
+}
+30% {
+    text-shadow: -1px 2px 0px #00ff6c, 0px -2px 0px #00e7ff;
+    color: #fb00ef;
+}
+40% {
+    text-shadow: -4px -3px 0px #00ff6c, 0px 2px 0px #000000;
+    color: #ffffff;
+}
+75% {
+    text-shadow: 0px 3px 0px #ffffff, 0px 3px 0px #ff0000;
+    color: #ffffff;
+}
+85% {
+    text-shadow: -1px 2px 0px #00ff07, 5px 0px 0px #000000;
+    color: #9300ff;
+}
+90% {
+    text-shadow: 0px -3px 0px #ff0000, -3px 0px 0px #000000;
+    color: #ffffff;
+}
+100% {
+    text-shadow: -1px 4px 0px #ffffff, 0px 3px 0px #000000;
+    color: #000000;
+}
+}
+
+/* Animation > Icon */
+
+#board-info-profile-img:hover,
+#board-info-profile-img:focus,
+#board-info-profile-img:active {
+    animation: 
+      3s 1 cubic-bezier(0.92, -0.01, 1, 0.85) logocrazyintro,
+      120ms 5 alternate 3000ms logocrazy,
+      660ms 2 alternate 3600ms logocrazy;
+}
+
+
+@keyframes logocrazyintro {
+100% {
+    transform: rotateZ(360deg);
+}
+}
+
+
+@keyframes logocrazy {
+0% {
+    filter: saturate(10000%) invert(100%) hue-rotate(0deg);
+}
+10% {
+    filter: saturate(100000%) invert(0%) hue-rotate(-180deg);
+}
+25% {
+    filter: saturate(10000%) invert(100%) hue-rotate(-360deg);
+}
+60% {
+    filter: saturate(10000%) invert(100%) hue-rotate(-200deg) contrast(100%);
+    transform: rotateZ(10deg);
+}
+70% {
+    filter: saturate(100%) invert(100%) hue-rotate(200deg) contrast(200%);
+    transform: rotateZ(-20deg);
+}
+100% {
+    filter: saturate(100%) invert(100%) hue-rotate(200deg) contrast(200%);
+    transform: rotateZ(20deg);
+}
+}
