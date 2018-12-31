@@ -3,52 +3,37 @@
 
   Chrome -> F12 -> Console -> CTRL+V :
 
-   $x("/html/head/style[2]")[0].innerText = "@import url('https://zoodasatgd.github.io/theme1/rainbow.css');"
+   $( "head" ).append( "<style>@import url('https://zoodasatgd.github.io/theme1/rainbow.css');</style>" )
 
  
 */
 
 /* Background */
+html, body{
+/*     height: auto !important; */
+}
 html {
   background: none !important;
+/*   height: 100% !important; */
 }
 body {
- background:
-  linear-gradient( 15deg,
-    hsla(270, 30%, 30%, 1) 0%,
-    hsla(30, 100%, 0%, 0.0) 49%,
-    hsla(100, 100%, 100%, 0.0) 51%,
-    hsla(0, 30%, 90%, 1) 98%), 
-  linear-gradient( -25deg,
-    rgb(237, 237, 151) 0%,
-    rgb(197, 255, 158) 9.5%,
-    rgb(194, 237, 151) 10%,
-    rgb(158, 255, 168) 19.6%,
-    rgb(151, 237, 151) 20%,
-    rgb(158, 255, 217) 29.7%,
-    rgb(151, 237, 194) 30%,
-    rgb(158, 246, 255) 39.8%,
-    rgb(151, 237, 237) 40%,
-    rgb(158, 197, 255) 49.9%,
-    rgb(151, 194, 237) 50%,
-    rgb(168, 158, 255) 60%,
-    rgb(151, 151, 237) 60%,
-    rgb(217, 158, 255) 69.9%,
-    rgb(194, 151, 237) 70%,
-    rgb(255, 158, 246) 79.8%,
-    rgb(237, 151, 237) 80%,
-    rgb(255, 158, 197) 89.7%,
-    rgb(237, 151, 194) 90%,
-    rgb(255, 168, 158) 99.6%);
-
+/* background: linear-gradient( 15deg,    hsla(270, 30%, 30%, 1) 0%,    hsla(30, 100%, 0%, 0.0) 49%,    hsla(100, 100%, 100%, 0.0) 51%,    hsla(0, 30%, 90%, 1) 98%),   linear-gradient( -25deg,    rgb(237, 237, 151) 0%,    rgb(197, 255, 158) 9.5%,    rgb(194, 237, 151) 10%,    rgb(158, 255, 168) 19.6%,    rgb(151, 237, 151) 20%,    rgb(158, 255, 217) 29.7%,    rgb(151, 237, 194) 30%,    rgb(158, 246, 255) 39.8%,    rgb(151, 237, 237) 40%,    rgb(158, 197, 255) 49.9%,    rgb(151, 194, 237) 50%,    rgb(168, 158, 255) 60%,    rgb(151, 151, 237) 60%,    rgb(217, 158, 255) 69.9%,    rgb(194, 151, 237) 70%,    rgb(255, 158, 246) 79.8%,    rgb(237, 151, 237) 80%,    rgb(255, 158, 197) 89.7%,    rgb(237, 151, 194) 90%,    rgb(255, 168, 158) 99.6%);  */
+/* background: linear-gradient( 15deg,    hsla(270, 30%, 30%, 1) 0%,    hsla(30, 100%, 0%, 0.0) 49%,    hsla(100, 100%, 100%, 0.0) 51%,    hsla(0, 30%, 90%, 1) 98%), linear-gradient( -25deg,rgb(255, 255, 220) 0%,rgb(235, 255, 235) 9.2%,rgb(238, 255, 220) 10%,rgb(235, 255, 245) 19.4%,rgb(220, 255, 220) 20%,rgb(235, 255, 255) 29.6%,rgb(220, 255, 238) 30%,rgb(235, 245, 255) 39.8%,rgb(220, 255, 255) 40%,rgb(235, 235, 255) 50%,rgb(220, 238, 255) 50%,rgb(245, 235, 255) 59.8%,rgb(220, 220, 255) 60%,rgb(255, 235, 255) 69.6%,rgb(238, 220, 255) 70%,rgb(255, 235, 245) 79.4%,rgb(255, 220, 255) 80%,rgb(255, 235, 235) 89.2%,rgb(255, 220, 238) 90%,rgb(255, 245, 235) 99%); */
+/* background:linear-gradient(15deg,hsla(270,30%,30%,1)0%,hsla(30,100%,0%,0.0)49%,hsla(100,100%,100%,0.0)51%,hsla(0,30%,90%,1)98%),linear-gradient(-25deg,rgb(255, 255, 204) 0%,rgb(220, 255, 220) 9.2%,rgb(230, 255, 204) 10%,rgb(220, 255, 238) 19.4%,rgb(204, 255, 204) 20%,rgb(220, 255, 255) 29.6%,rgb(204, 255, 230) 30%,rgb(220, 238, 255) 39.8%,rgb(204, 255, 255) 40%,rgb(220, 220, 255) 50%,rgb(204, 230, 255) 50%,rgb(238, 220, 255) 59.8%,rgb(204, 204, 255) 60%,rgb(255, 220, 255) 69.6%,rgb(230, 204, 255) 70%,rgb(255, 220, 238) 79.4%,rgb(255, 204, 255) 80%,rgb(255, 220, 220) 89.2%,rgb(255, 204, 230) 90%,rgb(255, 238, 220) 99%); */
+background: linear-gradient(15deg,hsla(270,30%,30%,1)0%,hsla(30,100%,0%,0.0)49%,hsla(100,100%,100%,0.0)51%,hsla(0,30%,90%,1)98%),linear-gradient(-25deg,rgb(255, 255, 204) 0%,rgb(230, 255, 220) 6.6%,rgb(238, 255, 204) 7.1%,rgb(220, 255, 222) 13.8%,rgb(220, 255, 204) 14.3%,rgb(220, 255, 235) 21.1%,rgb(204, 255, 208) 21.4%,rgb(220, 255, 248) 28.3%,rgb(204, 255, 226) 28.6%,rgb(220, 251, 255) 35.6%,rgb(204, 255, 244) 35.7%,rgb(220, 238, 255) 42.8%,rgb(204, 249, 255) 42.9%,rgb(220, 225, 255) 50%,rgb(204, 230, 255) 50%,rgb(227, 220, 255) 57%,rgb(204, 212, 255) 57.1%,rgb(240, 220, 255) 64%,rgb(215, 204, 255) 64.3%,rgb(253, 220, 255) 71.1%,rgb(233, 204, 255) 71.4%,rgb(255, 220, 245) 78.1%,rgb(251, 204, 255) 78.6%,rgb(255, 220, 233) 85.2%,rgb(255, 204, 241) 85.7%,rgb(255, 220, 220) 92.2%,rgb(255, 204, 223) 92.9%,rgb(255, 232, 220) 99.2%);
+/* background: linear-gradient(15deg,hsla(270,30%,30%,1)0%,hsla(30,100%,0%,0.0)49%,hsla(100,100%,100%,0.0)51%,hsla(0,30%,90%,1)98%),linear-gradient(-25deg,rgb(255, 255, 204) 0%,rgb(236, 255, 220) 5.1%,rgb(242, 255, 204) 5.6%,rgb(226, 255, 220) 10.7%,rgb(227, 255, 204) 11.1%,rgb(220, 255, 223) 16.3%,rgb(213, 255, 204) 16.7%,rgb(220, 255, 233) 22%,rgb(204, 255, 209) 22.2%,rgb(220, 255, 244) 27.6%,rgb(204, 255, 224) 27.8%,rgb(220, 255, 253) 33.2%,rgb(204, 255, 238) 33.3%,rgb(220, 248, 255) 38.8%,rgb(204, 255, 252) 38.9%,rgb(220, 238, 255) 44.4%,rgb(204, 244, 255) 44.4%,rgb(220, 228, 255) 50%,rgb(204, 230, 255) 50%,rgb(221, 220, 255) 55.4%,rgb(204, 216, 255) 55.6%,rgb(232, 220, 255) 60.9%,rgb(207, 204, 255) 61.1%,rgb(241, 220, 255) 66.4%,rgb(221, 204, 255) 66.7%,rgb(251, 220, 255) 71.9%,rgb(235, 204, 255) 72.2%,rgb(255, 220, 250) 77.4%,rgb(250, 204, 255) 77.8%,rgb(255, 220, 240) 82.9%,rgb(255, 204, 247) 83.3%,rgb(255, 220, 230) 88.4%,rgb(255, 204, 233) 88.9%,rgb(255, 220, 220) 93.9%,rgb(255, 204, 219) 94.4%,rgb(255, 229, 220) 99.4%); */
+/* background: linear-gradient(15deg,hsla(270,30%,30%,1)0%,hsla(30,100%,0%,0.0)49%,hsla(100,100%,100%,0.0)51%,hsla(0,30%,90%,1)98%),linear-gradient(-25deg,rgb(255, 255, 204) 0%,rgb(233, 255, 220) 6.1%,rgb(240, 255, 204) 6.3%,rgb(222, 255, 220) 12.4%,rgb(224, 255, 204) 12.5%,rgb(220, 255, 229) 18.6%,rgb(208, 255, 204) 18.8%,rgb(220, 255, 239) 24.9%,rgb(204, 255, 217) 25%,rgb(220, 255, 251) 31.2%,rgb(204, 255, 232) 31.3%,rgb(220, 249, 255) 37.5%,rgb(204, 255, 249) 37.5%,rgb(220, 238, 255) 43.7%,rgb(204, 246, 255) 43.8%,rgb(220, 227, 255) 49.9%,rgb(204, 230, 255) 50%,rgb(224, 220, 255) 56.1%,rgb(204, 215, 255) 56.3%,rgb(235, 220, 255) 62.3%,rgb(210, 204, 255) 62.5%,rgb(247, 220, 255) 68.5%,rgb(226, 204, 255) 68.8%,rgb(255, 220, 254) 74.8%,rgb(243, 204, 255) 75%,rgb(255, 220, 242) 81%,rgb(255, 204, 253) 81.3%,rgb(255, 220, 231) 87.2%,rgb(255, 204, 237) 87.5%,rgb(255, 220, 220) 93.4%,rgb(255, 204, 221) 93.8%,rgb(255, 230, 220) 99.6%); */
     background-size: 100% 100%;
     background-attachment: fixed;
+/*     height:100% !important; */
+/*     background-repeat:no-repeat; */
+/*     background-attachment:scroll; */
 }
 
 
 /* Logo */
 body > header > div:nth-child(1) > div > div.col-xs-4 > a > img{
-    filter: hue-rotate(-328deg) opacity(0.6);
+    filter: opacity(0.55) hue-rotate(62deg);
 }
 
 
@@ -59,58 +44,82 @@ header #header-bar {
 header #header-bar>.row {
     border: none;
     padding: 1px 0px;
+    background: linear-gradient(90deg,#fde9dd,#ffffff87,#faffe7,#ebfffc52);
 }
 header #right-search-form:before{
     content: " ";
-   position: absolute;
+    position: absolute;
     width: 214px;
     height: 36px;
     display: block;
     right: 49px;
+    background: #a2c7fa8a;
 }
+
 header #right-search-form>input[type=text]{
     border:none;
     margin:3px;
+    width: 206px;
+    font-size: 15px;
+}
+header #right-search-form>#right-search-btn{
+    width:31px;
 }
 .fa-search:before {
-    color: #b499ff;
+    color: #c0a7d0;
 }
 header #header-bar #header-top-notice strong.notice-badge{
     color: #555;
+    background: #f3c1da7d;
 }
 
+#board-info h1{
+    border-bottom: 1px solid #8ab3c8;
+}
 
 /* Menu <<< _______ */
 #main .menu-wrapper {
     border: none;
+    /*     border-bottom:14px solid #e2e2e2ab; */
+    /*     margin:0; */
+/*     background: linear-gradient(155deg,#ffece1,#fffee9,#fff4f1,#f2f2ff); */
 }
 #main .menu-wrapper>a {
     border:none;
     border-bottom:1px solid #e2e2e2;
+    background: none;
 }
 #main .menu-wrapper .spacer{
-    background:transparent;
+    background:#0000000f;
 }
 #main .menu-wrapper>.header {
-     color: #555;
-     padding: 5px 1.4em 6px 1em;
-     margin:0;
-     }
+    color: #555;
+    /* padding: 5px 1.4em 6px 1em; */
+    /* margin:0; */
+    background: #d2d8faad;
+}
 
 header #header-bar>.row:before {
     content: " ";
-    height: 4px;
+    height: 2px;
     width: 100%;
     position: relative;
-    top: -5px;
+    top: -3px;
 }
 #main .menu-wrapper>.header>a{
     color: #555;
 }
 
+#main #main-content>div.frame,
+#main .menu-wrapper {
+    background: linear-gradient(15deg,#ffd9d9a6,#eef1e9,#f5f1ff,#e6ecff,#ffffe6bf);
+}
 
 
 /* articles ____ >>>>>>>> */
+.fa-user:before {
+    content: " \c880 \be44 ";
+}
 #main #main-content>div.frame {
     border:none;
 }
@@ -119,54 +128,159 @@ header #header-bar>.row:before {
 }
 #article-content-wrapper>.header{
     border:none;
+    background: linear-gradient(0deg,#ffffff,#f2e7f3);
+}
+#article-content-wrapper>.footer{
+    background: linear-gradient(180deg,#ffffff,#f1e0ff);
+    
 }
 #article-content-wrapper:before,
 #article-list:before {
     content: " ";
     height: 2px;
     width:100%;
+    position:relative;
+    left: 0px;
     display: block;
 }
+
 
 
 /* Paginator */
 .pagination{
     border-radius: 3px;
-    padding-left: 3px;
 }
 .pagination>.active>a,.pagination>.active>a:hover{
     color: #555;
-    background:none;
-    background:#ffffffed;
+    background: #f7f3ff;
 }
 .pagination>li>a:hover{
     border-color: #555;
-    background:#ffffff;
+    /* background: #d8d8d8; */
     color:#555;
 }
 
 .pagination>li>a{
-    background: #ffffff8a;
-    border:none;
-    border-right:1px solid #a7a7a7;
-    margin:2px 2px;
-    padding: 5px 10px;
+    background: #ffffff;
+    border:1px solid #c7c0d8;
+    margin:2px 1px;
     border-radius: 3px !important;
 }
 
+#article-list>.article-list-row.hot:before{
+    content:" ";
+    width:847px;
+    position: absolute;
+    height:2px;
+    left: 14px;
+}
+#article-list>.article-list-row.hot{
+    background: linear-gradient(92deg,#fffdf2,#ffffff,#fffbfa,#f7fffe);
+}
+#article-list>.article-list-row.hot:hover{
+    background: linear-gradient(92deg,#fffade,#ffffff,#fffbfa,#f7fffe);
+}
+#article-list>.article-list-row.notice{
+    background: linear-gradient(92deg,#f8fcff,#ffffff,#f9fff7);
+}
+#article-list>.article-list-row.notice:hover{
+    background: linear-gradient(25deg,#ecf7ff,#ffffff,#f9fff7);
+}
+#article-list>.article-list-row {
+    border:none;
+/*     background:#fff; */
+    background: linear-gradient(31deg,#ffffff 15%,#f9fbff);
+}
+#article-list>.article-list-row:hover {
+    background: linear-gradient(45deg,#ffffff 5%,#fffce6,#ffeefd);
 
-.pagination,
-header #right-search-form:before,
-#main .menu-wrapper>.header,
-header #header-bar>.row:before,
-#article-content-wrapper:before,
-#article-list:before,
-header #header-bar #header-top-notice strong.notice-badge{
-    background-image: linear-gradient( 45deg, rgb(180, 153, 255) 19%, rgb(255, 153, 208) 39.4%, rgb(255, 221, 153) 59.8%, rgb(167, 255, 153) 79.8%, rgb(153, 249, 255) 100%);
+}
+#article-reply-area #reply-real-area .reply,
+#article-reply-area #reply-best-area .reply,
+#article-content-wrapper>.vote-area,
+#article-content-wrapper #article-content{
+    background:#ffffff;
+    border: none;
+}
+
+#article-list>.article-list-row:nth-of-type(6n+5),
+#article-list>.article-list-row:nth-of-type(6n+3) {
+/*     border-bottom: 1px solid #00000017; */
+/*     margin-bottom: 1px; */
+}
+#article-list>.article-list-row:nth-of-type(7n+1) {
+    border-bottom: 1px solid #00000017;
+    margin-bottom: 3px;
+}
+#article-list>.article-list-row>.item>.list-checkbox,
+#article-list>.article-list-row>.item>.list-header,
+#article-list>.article-list-row>.item>.list-category,
+#article-list>.article-list-row>.item>.list-title,
+#article-list>.article-list-row>.item>.list-blocked,
+#article-list>.article-list-row>.item>.list-time {
+    border-bottom:none;
+}
+
+#article-content-wrapper{
+    padding:0;
+    margin: 0 1em 1em;   
+}
+header #header-bar>.row,
+#main .menu-wrapper,
+#main #main-content>div.frame,
+#article-content-wrapper,
+#article-reply-area #reply-real-area .reply,
+#article-reply-area #reply-best-area .reply{
+    box-shadow: -1px 0px 3px rgba(0,0,0,.12);
+}
+/* #article-reply-area #reply-real-area .reply{
+    border:none;
+} */
+/* #article-reply-area #reply-best-area .reply > .reply-header, */
+#article-reply-area .reply > .reply-header{
+    border: none !important;
+}
+#article-reply-area #reply-best-area .reply > .reply-header{
+    background: linear-gradient(0deg,#fff4ea,#ffd7d6);
+}
+#article-reply-area #reply-real-area .reply:nth-of-type(5n +0) > .reply-header{    background: linear-gradient(0deg,#ffffff,#eff7f9);}
+#article-reply-area #reply-real-area .reply:nth-of-type(5n +1) > .reply-header{    background: linear-gradient(0deg,#ffffff,#fef3ff);}
+#article-reply-area #reply-real-area .reply:nth-of-type(5n +2) > .reply-header{    background: linear-gradient(0deg,#ffffff,#fbfff3);}
+#article-reply-area #reply-real-area .reply:nth-of-type(5n +3) > .reply-header{    background: linear-gradient(0deg,#ffffff,#f5fff3);}
+#article-reply-area #reply-real-area .reply:nth-of-type(5n +4) > .reply-header{    background: linear-gradient(0deg,#ffffff,#fff3f3);}
+
+/* Selected comment */
+#article-reply-area .reply.active > .reply-header{
+    background: linear-gradient(0deg,#fff9e5,#ffffff) !important;
+}
+#article-reply-area #reply-real-area .reply.active,
+#article-reply-area #reply-best-area .reply.active{
+    box-shadow: 0px 0px 11px 0px #8180ffd1;
+}
+
+/* New message top line */
+.fr-toolbar{
+    border-top:5px solid #a29dd2;
 }
 
 
+#article-list>.article-list-row.hot:before,
+header #header-bar>.row:before,
+#article-content-wrapper:before,
+#article-list:before{/* background-image: linear-gradient( 45deg, rgb(180, 153, 255) 19%, rgb(255, 153, 208) 39.4%, rgb(255, 221, 153) 59.8%, rgb(167, 255, 153) 79.8%, rgb(153, 249, 255) 100%); */background: linear-gradient( 45deg,rgb(183, 158, 250) 19%,rgb(250, 158, 207) 39.4%,rgb(250, 220, 158) 59.8%,rgb(171, 250, 158) 79.8%,rgb(158, 244, 250) 99.4%);/* background: linear-gradient( 45deg,rgb(188, 168, 240) 19%,rgb(240, 168, 207) 39.4%,rgb(240, 216, 168) 59.8%,rgb(178, 240, 168) 79.8%,rgb(168, 235, 240) 99.4%); */}
 
+/* Fix  */
+#main-content > div > div:nth-child(6) > div > div > div{
+    background:transparent !important;
+}
+
+#article-list #article-list-menu>.btn.best{
+    box-shadow: 0px 0px 4px #989898;
+    background: #fff;
+}
+#article-list #article-list-menu>.btn.best.enable{
+    box-shadow: 0px 0px 4px #fff964;
+}
 
 /* Animations */
 /* Nickname (Desktop) */
