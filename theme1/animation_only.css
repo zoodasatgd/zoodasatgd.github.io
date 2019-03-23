@@ -1,0 +1,88 @@
+
+/* Animations */
+/* Nickname (Desktop) */
+#board-info > h1 > a:nth-child(1) {
+    letter-spacing: 0.04em;
+}
+
+/* Nickname > Animation (Mobile + Desktop) */
+#board-info > h1 > a:first-of-type:hover,
+#board-info > h1 > a:first-of-type:focus,
+#board-info > h1 > a:first-of-type:active {
+    animation: 180ms 1 alternate 400ms slidein,     250ms 1 alternate 480ms slidein,     660ms 1 alternate 630ms slidein;
+}
+@keyframes slidein {
+0% {
+}
+25% {
+    text-shadow: -1px 0px 0px #00ff03, -2px 0px 0px #000000;
+    color: #ffffff;
+}
+30% {
+    text-shadow: -1px 2px 0px #00ff6c, 0px -2px 0px #00e7ff;
+    color: #fb00ef;
+}
+40% {
+    text-shadow: -4px -3px 0px #00ff6c, 0px 2px 0px #000000;
+    color: #ffffff;
+}
+75% {
+    text-shadow: 0px 3px 0px #ffffff, 0px 3px 0px #ff0000;
+    color: #ffffff;
+}
+85% {
+    text-shadow: -1px 2px 0px #00ff07, 5px 0px 0px #000000;
+    color: #9300ff;
+}
+90% {
+    text-shadow: 0px -3px 0px #ff0000, -3px 0px 0px #000000;
+    color: #ffffff;
+}
+100% {
+    text-shadow: -1px 4px 0px #ffffff, 0px 3px 0px #000000;
+    color: #000000;
+}
+}
+
+/* Animation > Icon */
+
+#board-info-profile-img:hover,
+#board-info-profile-img:focus,
+#board-info-profile-img:active {
+    animation: 
+      3s 1 cubic-bezier(0.92, -0.01, 1, 0.85) logocrazyintro,
+      120ms 5 alternate 3000ms logocrazy,
+      660ms 2 alternate 3600ms logocrazy;
+}
+
+
+@keyframes logocrazyintro {
+100% {
+    transform: rotateZ(360deg);
+}
+}
+
+
+@keyframes logocrazy {
+0% {
+    filter: saturate(10000%) invert(100%) hue-rotate(0deg);
+}
+10% {
+    filter: saturate(100000%) invert(0%) hue-rotate(-180deg);
+}
+25% {
+    filter: saturate(10000%) invert(100%) hue-rotate(-360deg);
+}
+60% {
+    filter: saturate(10000%) invert(100%) hue-rotate(-200deg) contrast(100%);
+    transform: rotateZ(10deg);
+}
+70% {
+    filter: saturate(100%) invert(100%) hue-rotate(200deg) contrast(200%);
+    transform: rotateZ(-20deg);
+}
+100% {
+    filter: saturate(100%) invert(100%) hue-rotate(200deg) contrast(200%);
+    transform: rotateZ(20deg);
+}
+}
