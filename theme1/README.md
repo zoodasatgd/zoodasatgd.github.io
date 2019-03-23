@@ -5,10 +5,11 @@ Preview:
 ```js
     $("head").append( "<style>@import url('https://zoodasatgd.github.io/theme1/rainbow.css');</style>" )
 ```
-Apply:
+Apply full:
 ```css
     @import url('https://zoodasatgd.github.io/theme1/rainbow.css');
-    
-    Animation only
+```
+Apply animation only (logo and nickname):
+```css
     @import url('https://zoodasatgd.github.io/theme1/animation_only.css');
 ```
