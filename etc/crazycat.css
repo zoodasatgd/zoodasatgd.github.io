@@ -1,0 +1,62 @@
+#board-info h1:active:after, #board-info h1:hover:after,
+#board-info h1:active:before, #board-info h1:hover:before{
+    content:" ";
+    display:block;
+    height:100vh;
+    position: fixed;
+    width:0;
+    left:0;
+    top:0;
+    cursor: none;
+}
+/* profile */
+#board-info h1:active:before, 
+#board-info h1:hover:before {
+    animation: 42s 1 cubic-bezier(0.13, 0, 0.01, 0.97) backwards cheese;
+    
+    
+    animation-delay: 3s; /*  Delay before activation. Edit below too. */
+    
+    background:center url("https://static-cdn.jtvnw.net/jtv_user_pictures/78858c8b-fcd5-4b76-9a91-cb89a15389f7-profile_image-300x300.png"), rgba(0,0,0,0.3);
+    background-position:50% 270%;
+    z-index:50012;
+}
+/* emote */
+#board-info h1:active:after, 
+#board-info h1:hover:after {
+    animation: 37s 1 cubic-bezier(0.04, 0.97, 0.06, 0.98) backwards cheese;
+    
+    
+    animation-delay: 7s; /*  (+4 sec.) Delay before activation.  */
+    
+    background:center url("https://static-cdn.jtvnw.net/emoticons/v1/2044745/3.0"), rgba(0,0,0,1);
+    background-position:50% 50%;
+    z-index:50011;
+}
+
+
+@keyframes cheese{
+    0.00%{width:0;
+        background-size: 600%;
+        opacity:0;}
+
+    0.01%{
+        width:100%;
+        -webkit-filter:saturate(0%) saturate(0%) contrast(100%)  brightness(0);
+        background-size: 600%;
+        opacity:0;
+    }
+
+     5.00%{opacity:1;}
+    90.00%{opacity:1;}
+
+    100%{
+        width:100vw;
+        background-size:0.001%;
+        /* background-size: 600%; */
+        -webkit-filter:saturate(300%) saturate(300%) contrast(200%) brightness(1);
+        opacity:0;
+        background-position:50% 780%;
+    }
+}
+
