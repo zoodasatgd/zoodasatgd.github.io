@@ -7,7 +7,7 @@ CSS (PC + mobile)
 
 Preview
 ---
-Chrome -> F12 -> CTRL+V:
+Chrome -> F12 -> Console -> CTRL+V:
 ```js
 $("head").append( "<style>@import url('https://zoodasatgd.github.io/etc/crazycat.css');</style>" )
 ```
