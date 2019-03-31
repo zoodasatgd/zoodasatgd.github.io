@@ -1,3 +1,9 @@
+<img src="https://i.imgur.com/IQMAdy9.png" />
+
+Activation
+---
+5sec over nickname
+
 
 CSS (PC + mobile)
 ---
