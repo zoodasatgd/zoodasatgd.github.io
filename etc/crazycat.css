@@ -15,7 +15,7 @@
     animation: 42s 1 cubic-bezier(0.13, 0, 0.01, 0.97) backwards cheese;
     
     
-    animation-delay: 3s; /*  Delay before activation. Edit below too. */
+    animation-delay: 5s; /*  Delay before activation. Edit below too. */
     
     background:center url("https://static-cdn.jtvnw.net/jtv_user_pictures/78858c8b-fcd5-4b76-9a91-cb89a15389f7-profile_image-300x300.png"), rgba(0,0,0,0.3);
     background-position:50% 270%;
@@ -27,7 +27,7 @@
     animation: 37s 1 cubic-bezier(0.04, 0.97, 0.06, 0.98) backwards cheese;
     
     
-    animation-delay: 7s; /*  (+4 sec.) Delay before activation.  */
+    animation-delay: 9s; /*  (+4 sec.) Delay before activation.  */
     
     background:center url("https://static-cdn.jtvnw.net/emoticons/v1/2044745/3.0"), rgba(0,0,0,1);
     background-position:50% 50%;
