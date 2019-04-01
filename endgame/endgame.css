@@ -1,0 +1,43 @@
+body:before {
+    content: " ";
+    width: 100%;
+    background: #000000;
+    height: 100%;
+    display: block;
+    z-index: 50000;
+    position:fixed;
+    /* display: none; */
+    cursor:none;
+}
+
+body:after {
+    content: "zoodasa returns for endgame";
+    width: 100%;
+    color: white;
+    height: 100%;
+    display: block;
+    z-index: 50001;
+    position:fixed;
+    left: 0;
+    font-size: 70px;
+    top: 40%;
+    text-align: center;
+    text-shadow: 0 0 7px #fff;
+    padding:0 30px;
+    animation: 1.5s cubic-bezier(0.55, 0.12, 0.54, 0.85) infinite alternate eg;
+    cursor:none;
+
+}
+@keyframes eg{
+  0%{
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0);
+  }
+  50%{
+    color: rgb(255, 255, 255, 0.99);
+    text-shadow: 0 0 7px rgba(244, 244, 244, 0.99);
+  }
+}
+body{
+    height: auto !important;
+}
