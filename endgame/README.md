@@ -2,7 +2,8 @@
 
 Description
 ---
-*Page is blocked!*
+**Page is blocked!**
+Text is fading in and out.
 
 
 CSS (PC + mobile)
